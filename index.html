@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
@@ -31,24 +32,43 @@
 <body class="root">
     <header class="header">
         <div class="header__wrapper">
-            <img class="header__logo" src="./image/logo.png" alt="">
-            <div class="header__menu menu">
+            <div class="header__container">
+                <img class="header__logo" src="./image/logo.png" alt="">
+                <div class="header__menu menu">
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a href="" class="menu__link menu__link_active">
+                                    <span class="menu__num">00.
+                                    </span>Главная</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__link">
+                                    <span class="menu__num">01.
+                                    </span>Торговля</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__link">
+                                    <span class="menu__num">02.
+                                    </span>Новости</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="" class="menu__link">
+                                    <span class="menu__num">03.
+                                    </span>
+                                    О нас
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <a href="#" class="header__btn header__btn_value_login">Войти</a>
                 <div class="menu__icon icon-menu">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <nav class="menu__body">
-                    <ul class="menu__list">
-                        <li class="menu__item"><a href="" class="menu__link menu__link_active">Главная</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Торговля</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Новости</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">О нас</a></li>
-                    </ul>
-                </nav>
             </div>
-            <a href="#" class="header__btn header__btn_value_login">Login</a>
-            <a href="#" class="header__btn header__btn_value_register">Register</a>
         </div>
     </header>
     <main class="main">
@@ -58,7 +78,7 @@
             <p class="space__text">Храните свою криптовалюту безопасно и получайте пассивный доход</p>
             <button class="space__btn">Регистрация</button>
             <ul class="space__cards cards">
-                <li class="card card_space">
+                <li class="card card_space ">
                     <div class="card__currency">
                         <img class="card__image" src="./image/bitcoin.png" alt="">
                         <div class="card__info">
@@ -75,7 +95,7 @@
                         <span class="card__price-day_change">$8000</span> 24 часа
                     </p>
                 </li>
-                <li class="card card_space">
+                <li class="card card_space ">
                     <div class="card__currency">
                         <img class="card__image" src="./image/bitcoin.png" alt="">
                         <div class="card__info">
@@ -92,7 +112,7 @@
                         <span class="card__price-day_change">$8000</span> 24 часа
                     </p>
                 </li>
-                <li class="card card_space">
+                <li class="card card_space ">
                     <div class="card__currency">
                         <img class="card__image" src="./image/bitcoin.png" alt="">
                         <div class="card__info">
@@ -109,7 +129,7 @@
                         <span class="card__price-day_change">$8000</span> 24 часа
                     </p>
                 </li>
-                <li class="card card_space">
+                <li class="card card_space ">
                     <div class="card__currency">
                         <img class="card__image" src="./image/bitcoin.png" alt="">
                         <div class="card__info">
@@ -127,6 +147,7 @@
                     </p>
                 </li>
             </ul>
+            </div>
             <!-- Цвета линии на оранжевый цвет -->
         </section>
         <section class="about about_platform">
@@ -199,12 +220,13 @@
         </section>
     </main>
     <footer class="footer">
+
         <div class="footer__container">
 
             <div class="footer__columns">
                 <div class="footer__column footer__column_content_copyright">
                     <img class="logo logo_place_footer" src="./image/logo.png" alt="Space">
-                    <p class="footer__author"> &copy; 2021. Павлов Артём</p>
+
                 </div>
                 <nav class="footer__column footer__column_content_info">
                     <h2 class="footer__column-heading">
@@ -247,9 +269,22 @@
                     </ul>
                 </nav>
             </div>
+            <div class="footer__columns">
+                <div class="footer__column footer__column_author">
+                    &copy; 2021. Space
+
+                </div>
+
+                <nav class="footer__column footer__column_content_social">
+                    <p class="footer__column_email">space@gmail.com</p>
+                </nav>
+            </div>
         </div>
 
     </footer>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
