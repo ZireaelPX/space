@@ -128,11 +128,6 @@ html,
 	&._active {
 		right: -25%;
 	}
-	&__icon {
-	}
-
-	&__body {
-	}
 
 	&__list {
 		display: flex;
@@ -465,9 +460,9 @@ html,
 .footer {
 	padding-top: 200px;
 	// background-color: #dff1ff;
-	background-image: url(../image/fon-footer.png);
-	background-size: cover;
-	background-repeat: no-repeat;
+	// background-image: url(../image/fon-footer.png);
+	// background-size: cover;
+	// background-repeat: no-repeat;
 }
 .footer__container {
 	max-width: 1470px;
