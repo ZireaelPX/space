@@ -1,0 +1,150 @@
+.icon-menu {
+	@media (max-width: 768px) {
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		transform: translate(0%, -50%);
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 99;
+		span {
+			transition: all 0.3s ease 0s;
+			top: calc(50% - 1px);
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+			&:first-child {
+				top: 0px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+		&._active {
+			span {
+				transform: scale(0);
+				&:first-child {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+		}
+	}
+}
+.header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	&__wrapper {
+		// transition: background-color 0.3s ease 0s;
+		// position: fixed;
+		// width: 100%;
+		// left: 0;
+		// top: 0;
+		// z-index: 99;
+	}
+	&__container {
+		min-height: 120px;
+		max-width: 1470px;
+		padding: 0 15px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+	}
+	&__logo {
+		width: 200px;
+		margin: 0px 65px 0px 0px;
+		@media (max-width: 1024px) {
+			margin: 0px 30px 0px 0px;
+		}
+		@media (max-width: 768px) {
+			margin: 0px auto 0px 0px;
+		}
+	}
+
+	&__menu {
+		margin: 0px auto 0px 0px;
+	}
+
+	&__btn {
+		width: 100px;
+		height: 35px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid red;
+		text-decoration: none;
+		border-radius: 5px;
+
+		&_value_login {
+			color: #3a68f2;
+			background-color: transparent;
+			@media (max-width: 768px) {
+				margin: 0px 55px 0px 0px;
+			}
+		}
+	}
+}
+.menu {
+	@media (max-width: 768px) {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		top: 0;
+		right: -105%;
+		background: hsl(0 0% 100% / 0.1);
+		backdrop-filter: blur(1rem);
+		transition: right 0.8s ease 0s;
+		z-index: 2;
+		overflow: auto;
+	}
+	&._active {
+		right: -25%;
+	}
+
+	&__list {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		@media (max-width: 768px) {
+			padding: 120px 0 120px 50px;
+			flex-direction: column;
+		}
+	}
+	&__item {
+		&:not(:last-child) {
+			margin: 0px 30px 0px 0px;
+			@media (max-width: 768px) {
+				margin: 0px 0px 30px 0px;
+			}
+		}
+	}
+
+	&__link {
+		font-size: 20px;
+		color: #000;
+		text-decoration: none;
+		&_active {
+			font-weight: 700;
+		}
+	}
+	&__num {
+		font-weight: 700;
+		display: none;
+		@media (max-width: 768px) {
+			display: inline;
+		}
+	}
+}
