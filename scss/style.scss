@@ -3,9 +3,11 @@
 //footer
 
 html,
-.root {
+body {
 	height: 100%;
+	overflow: auto;
 }
+
 .root {
 	background-image: linear-gradient(60deg, #dff1ff 0%, #e9f3ff 70%, #f7faff 100%);
 	position: relative;
