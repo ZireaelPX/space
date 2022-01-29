@@ -1,0 +1,171 @@
+@import url("./style.css");
+@import url("./header.css");
+@import url("./footer.css");
+
+$color-release: #707070;
+%news-fonts {
+	font-size: 20px;
+	line-height: 22px;
+}
+%title-fonts {
+	font-size: 46px;
+	line-height: 56px;
+	color: #000000;
+	font-weight: 600;
+}
+%news-text {
+	font-size: 16px;
+	line-height: 25px;
+	color: #707070;
+}
+
+.news-page {
+	box-sizing: border-box;
+	font-family: "Inter", sans-serif;
+	color: #000;
+	max-width: 1470px;
+	margin: 0 auto;
+	padding: 150px 15px 0;
+	text-align: justify;
+
+	&__title {
+		@extend %title-fonts;
+		margin-bottom: 40px;
+		text-align: left;
+	}
+
+	&__info {
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__lead {
+		box-sizing: border-box;
+		flex: 0 0 50%;
+		padding: 0 60px 0 0;
+		font-size: 18px;
+		line-height: 25px;
+	}
+
+	&__desc {
+		box-sizing: border-box;
+		padding: 0 0 0 60px;
+		flex: 0 0 50%;
+		font-size: 16px;
+		line-height: 25px;
+		color: $color-release;
+	}
+
+	&__accordion {
+		box-sizing: border-box;
+		// display: none;
+		margin-top: 50px;
+
+		p {
+			@extend %news-text;
+			margin-bottom: 30px;
+		}
+
+		&--bold {
+			font-weight: 700;
+		}
+
+		&--more {
+			a {
+				cursor: pointer;
+			}
+
+			label {
+				cursor: pointer;
+				transition: all 0.3s ease 0s;
+
+				&.more {
+					svg {
+						transform: rotate(-90deg);
+						width: 20px;
+						height: 20px;
+					}
+				}
+			}
+
+			svg {
+				transform: rotate(90deg);
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+	&__items {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 900px) {
+	.news-page {
+		padding: 150px 15px 0;
+
+		&__title {
+			margin-bottom: 40px;
+			font-size: 24px;
+			line-height: 24px;
+		}
+
+		&__info {
+			flex-direction: column;
+		}
+
+		&__lead {
+			flex: 1 1 auto;
+			padding: 0;
+			font-size: 18px;
+			line-height: 25px;
+			margin-bottom: 20px;
+		}
+
+		&__desc {
+			padding: 0;
+			flex: 1 1 auto;
+			font-size: 16px;
+			line-height: 25px;
+		}
+		&__accordion {
+			margin-top: 50px;
+			p {
+				margin-bottom: 30px;
+			}
+			&--bold {
+				font-weight: 700;
+			}
+		}
+	}
+}
+.accordion {
+	&__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: transparent;
+		border: 2px solid rgb(0, 0, 0);
+		padding: 5px;
+		font-size: 18px;
+		span {
+			margin: 0px 5px 0px 0px;
+		}
+		&._active {
+			img {
+				transition: transform 0.3s ease 0s;
+				transform: rotate(180deg);
+			}
+		}
+		img {
+			transition: transform 0.3s ease 0s;
+		}
+	}
+}

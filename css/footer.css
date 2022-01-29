@@ -1,6 +1,11 @@
 .footer {
   padding-top: 200px;
 }
+@media (max-width: 768px) {
+  .footer {
+    padding: 100px 0px 0px 0px;
+  }
+}
 
 .footer__container {
   max-width: 1470px;
@@ -42,6 +47,9 @@
 }
 @media (max-width: 768px) {
   .footer__columns {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
