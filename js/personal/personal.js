@@ -3,28 +3,28 @@ import { FormValidator } from "./FormValidator.js";
 
 const initialCards = [
 	{
-		name: 'Архыз',
-		link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+		name: 'Биткоин',
+		link: 'https://images.unsplash.com/photo-1519162584292-56dfc9eb5db4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1075&q=80'
 	},
 	{
-		name: 'Челябинская область',
-		link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+		name: 'Ethereum',
+		link: 'https://images.unsplash.com/photo-1622632169740-85c306c57aa2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80'
 	},
 	{
-		name: 'Иваново',
-		link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+		name: 'XRP',
+		link: 'https://images.unsplash.com/photo-1628238289092-b94f5c5b9375?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80'
 	},
 	{
-		name: 'Камчатка',
-		link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+		name: 'Dogecoin',
+		link: 'https://images.unsplash.com/photo-1622450373817-1fc9608c31f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80'
 	},
 	{
-		name: 'Холмогорский район',
-		link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+		name: 'Ton coin',
+		link: 'https://www.clublaura.com/wp-content/uploads/2018/05/shutterstock_795545785.jpg'
 	},
 	{
-		name: 'Байкал',
-		link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+		name: 'Solana',
+		link: 'https://cryptonew.ru/uploads/posts/2021-01/1609665451_solana-sol-coin-1.png'
 	}
 ];
 

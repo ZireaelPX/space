@@ -1,5 +1,6 @@
 .root {
-	background-color: #000;
+	// background-color: #000;
+	background-image: linear-gradient(60deg, #dff1ff 0%, #e9f3ff 70%, #f7faff 100%);
 	margin: 0;
 	overflow-y: scroll;
 }
@@ -60,6 +61,7 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
+	color: #000;
 }
 @media screen and (max-width: 620px) {
 	.profile__subtitle {
@@ -76,6 +78,7 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
+	color: #000;
 }
 @media screen and (max-width: 620px) {
 	.profile__name {
@@ -105,7 +108,7 @@
 	position: relative;
 	bottom: 8px;
 	background-color: transparent;
-	border: 1px solid #fff;
+	border: 1px solid #000;
 	color: #fff;
 	width: 24px;
 	height: 24px;
@@ -128,6 +131,8 @@
 .profile__avatar {
 	min-width: 120px;
 	min-height: 120px;
+	width: 120px;
+	height: 120px;
 	object-fit: cover;
 	border-radius: 50%;
 	overflow: hidden;
@@ -144,7 +149,7 @@
 	position: relative;
 	width: 150px;
 	height: 50px;
-	border: 2px solid #ffffff;
+	border: 2px solid #000;
 	box-sizing: border-box;
 	border-radius: 2px;
 	background-color: transparent;
@@ -162,7 +167,7 @@
 	position: absolute;
 	width: 2px;
 	height: 22px;
-	background-color: #fff;
+	background-color: #000;
 }
 .profile__add-btn::before {
 	transform: translate(-50%, -50%);
