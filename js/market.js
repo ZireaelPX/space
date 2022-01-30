@@ -22,7 +22,9 @@ class Api {
 
 }
 
-const textBtcPrice = document.querySelector('.market__btc-price');
+const textBtcPrice = document.querySelector('.market__btc-price span');
+const linkBtcPrice = document.querySelector('.price-btc');
+
 const api = new Api();
 
 const repeatBtcPrice = () => {
@@ -30,6 +32,7 @@ const repeatBtcPrice = () => {
 		console.log(data);
 		const price = data.price;
 		textBtcPrice.textContent = +price;
+		linkBtcPrice.textContent = +price;
 	});
 };
 repeatBtcPrice();

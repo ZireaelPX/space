@@ -18,23 +18,138 @@
 	margin: 0 auto;
 	padding: 0 15px;
 	padding-top: 200px;
+	@media (max-width: 768px) {
+		padding-top: 150px;
+	}
 
 	&__block {
 		display: grid;
 		grid-gap: 20px;
 		grid-template-columns: 1fr 1fr 1fr;
+		margin-bottom: 20px;
+		@media (max-width: 990px) {
+			grid-template-columns: 1fr;
+		}
 	}
 	&__stroke {
 		grid-column-start: 1;
 		grid-column-end: 4;
+		@media (max-width: 990px) {
+			grid-column-start: 1;
+			grid-column-end: 1;
+		}
 	}
 	&__cripto {
 		grid-column-start: 1;
 		grid-column-end: 2;
+		@media (max-width: 990px) {
+			display: none;
+		}
 	}
 	&__graph {
 		min-height: 600px;
 		grid-column-start: 2;
 		grid-column-end: 4;
+		@media (max-width: 990px) {
+			grid-column-start: 1;
+			grid-column-end: 1;
+		}
+	}
+	&__links {
+		background: #fff;
+		border: 1px solid #e0e3eb;
+		border-radius: 3px;
+		box-sizing: border-box;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		padding: 25px 10px;
+		@media (max-width: 990px) {
+			grid-column-start: 1;
+			grid-column-end: 1;
+		}
+	}
+	&__info {
+		padding: 0;
+		margin: 0;
+		margin: 0px 0px 20px 0px;
+	}
+	&__text {
+		padding: 5px 0px 5px 0px;
+		border-bottom: 1px solid rgb(112, 122, 138);
+		transition: all 0.3s ease 0s;
+		margin: 0px 0px 10px 0px;
+		&:hover {
+			background-color: rgb(230, 230, 230);
+			opacity: 0.9;
+		}
+		&:last-child {
+			margin: 0;
+		}
+	}
+	&__link {
+		text-decoration: none;
+		display: flex;
+		justify-content: space-between;
+		color: rgb(112, 122, 138);
+	}
+	&__price {
+		color: rgb(14, 203, 129);
+	}
+	&__forms {
+		grid-column-start: 2;
+		grid-column-end: 4;
+		@media (max-width: 990px) {
+			grid-column-start: 1;
+			grid-column-end: 1;
+		}
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 40px;
+		background: #fff;
+		border: 1px solid #e0e3eb;
+		border-radius: 3px;
+		box-sizing: border-box;
+		height: 100%;
+		overflow: hidden;
+		position: relative;
+		padding: 10px 15px;
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+		}
+	}
+	&__form {
+		h4 {
+			font-size: 18px;
+			line-height: 24px;
+			margin: 0px 0px 20px 0px;
+			padding: 0;
+		}
+		padding: 5px;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+	}
+	&__input {
+		box-sizing: border-box;
+		background-color: rgba(230, 232, 234, 0.6);
+		border: none;
+		height: 40px;
+		border-radius: 10px;
+		padding: 5px 10px;
+		// outline: 1px solid rgba(230, 232, 234, 0.6);
+
+		&:focus {
+			outline: 1px solid rgb(240, 185, 11);
+		}
+	}
+	&__sbm-btn {
+		margin-top: 20px;
+		background-color: rgb(253, 210, 69);
+		border: none;
+		height: 50px;
+		border-radius: 10px;
+		outline: none;
+		font-weight: 600;
 	}
 }
