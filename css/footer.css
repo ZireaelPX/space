@@ -17,6 +17,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 350px;
 }
 
 .footer__column-links {
@@ -41,12 +42,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 0px;
+  padding-top: 60px;
   padding-bottom: 40px;
 }
 @media (max-width: 768px) {
   .footer__columns {
-    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     -webkit-box-orient: vertical;
