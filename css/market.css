@@ -1,0 +1,48 @@
+@import url("./style.css");
+@import url("./header.css");
+@import url("./footer.css");
+.root {
+  background-color: #fff;
+  background-image: none;
+  overflow-x: hidden;
+}
+
+#tradingview_ff3bb {
+  min-height: 600px;
+}
+#tradingview_ff3bb > div {
+  height: 600px !important;
+}
+
+.market {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 15px;
+  padding-top: 200px;
+}
+.market__block {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.market__stroke {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-span: 3;
+  grid-column-end: 4;
+}
+.market__cripto {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+}
+.market__graph {
+  min-height: 600px;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-column-span: 2;
+  grid-column-end: 4;
+}

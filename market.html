@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Криптобиржа - Space.</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/market.css">
+
+</head>
+
+<body class="root">
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__wrapper">
+				<div class="header__container">
+					<img class="header__logo" src="./image/logo.png" alt="">
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="./main.html" class="menu__link menu__link_active">
+										<span class="menu__num">00.
+										</span>Главная</a>
+								</li>
+								<li class="menu__item">
+									<a href="./market.html" class="menu__link">
+										<span class="menu__num">01.
+										</span>Торговля</a>
+								</li>
+								<li class="menu__item">
+									<a href="./news-page.html" class="menu__link">
+										<span class="menu__num">03.
+										</span>
+										Новости
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<a href="./personal.html" class="header__btn header__btn_value_login">Аккаунт</a>
+					<div class="menu__icon icon-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="market">
+
+				<div class="market__block">
+					<div class="market__stroke">
+						<!-- TradingView Widget BEGIN -->
+						<div class="tradingview-widget-container">
+							<div class="tradingview-widget-container__widget"></div>
+
+							<script type="text/javascript"
+								src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js"
+								async>
+									{
+										"symbols": [
+											{
+												"proName": "BITSTAMP:BTCUSD",
+												"title": "Биткоин"
+											},
+											{
+												"proName": "BITSTAMP:ETHUSD",
+												"title": "Эфириум"
+											},
+											{
+												"description": "Ton coin",
+												"proName": "FTX:TONCOINUSD"
+											},
+											{
+												"description": "Solana",
+												"proName": "BINANCE:SOLUSDT"
+											}
+										],
+											"colorTheme": "light",
+												"isTransparent": false,
+													"showSymbolLogo": true,
+														"locale": "ru"
+									}
+								</script>
+						</div>
+						<!-- TradingView Widget END -->
+					</div>
+					<div class="market__cripto">
+						<!-- TradingView Widget BEGIN -->
+						<div class="tradingview-widget-container">
+							<div class="tradingview-widget-container__widget"></div>
+
+							<script type="text/javascript"
+								src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js"
+								async>
+									{
+										"interval": "1m",
+											"width": "100%",
+												"isTransparent": false,
+													"height": "100%",
+														"symbol": "BINANCE:BTCUSDT",
+															"showIntervalTabs": true,
+																"locale": "ru",
+																	"colorTheme": "light"
+									}
+								</script>
+						</div>
+						<!-- TradingView Widget END -->
+					</div>
+					<div class="market__graph">
+						<!-- TradingView Widget BEGIN -->
+						<div class="tradingview-widget-container">
+							<div id="tradingview_ff3bb"></div>
+
+							<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+							<script type="text/javascript">
+								new TradingView.widget(
+									{
+										"autosize": true,
+										"symbol": "BINANCE:BTCUSDT",
+										"interval": "D",
+										"timezone": "Etc/UTC",
+										"theme": "light",
+										"style": "1",
+										"locale": "ru",
+										"toolbar_bg": "#f1f3f6",
+										"enable_publishing": false,
+										"allow_symbol_change": true,
+										"container_id": "tradingview_ff3bb"
+									}
+								);
+							</script>
+						</div>
+						<!-- TradingView Widget END -->
+
+					</div>
+				</div>
+
+				<p class="market__btc-price"></p>
+				<div class="tradingview-widget-copyright"><a
+						href="https://ru.tradingview.com/symbols/BTCUSDT/technicals/" rel="noopener"
+						target="_blank"><span class="blue-text">Технический анализ
+							BTCUSDT</span></a> от
+					TradingView</div>
+				<div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com" rel="noopener"
+						target="_blank"><span class="blue-text">Котировки</span></a>
+					предоставлены TradingView</div>
+				<div class="tradingview-widget-copyright"><a
+						href="https://ru.tradingview.com/symbols/BTCUSDT/?exchange=BINANCE" rel="noopener"
+						target="_blank"><span class="blue-text">График
+							BTCUSDT</span></a>
+					от TradingView
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+
+			<div class="footer__container">
+
+				<div class="footer__columns">
+					<div class="footer__column footer__column_content_copyright">
+						<img class="logo logo_place_footer" src="./image/logo.png" alt="Space">
+
+					</div>
+					<nav class="footer__column footer__column_content_info">
+						<h2 class="footer__column-heading">
+							О нас
+						</h2>
+						<ul class="footer__column-links">
+							<li>
+								<a class="footer__column-link" href="#">Главная</a>
+							</li>
+							<li>
+								<a class="footer__column-link" href="#">Концепция</a>
+							</li>
+							<li>
+								<a class="footer__column-link" href="#">Новости</a>
+							</li>
+						</ul>
+					</nav>
+					<nav class="footer__column footer__column_content_social">
+						<h2 class="footer__column-heading">
+							Соцсети
+						</h2>
+						<ul class="footer__column-links">
+							<li>
+								<a class="footer__column-link footer__column-link_display_flex" href="#">
+									<img class="footer__social-icon" src="./image/facebook_color_white.svg"
+										alt="Фейсбук">
+									Facebook
+								</a>
+							</li>
+							<li>
+								<a class="footer__column-link footer__column-link_display_flex" href="#">
+									<img class="footer__social-icon" src="./image/vk_color_white.svg"
+										alt="ВКонтакте">
+									ВКонтакте</a>
+							</li>
+							<li>
+								<a class="footer__column-link footer__column-link_display_flex" href="#">
+									<img class="footer__social-icon" src="./image/instagram_color_white.svg"
+										alt="Инстаграм">
+									Instagram</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer__columns">
+					<div class="footer__column footer__column_author">
+						&copy; 2021. Space
+
+					</div>
+
+					<nav class="footer__column footer__column_content_social">
+						<p class="footer__column_email">space@gmail.com</p>
+					</nav>
+				</div>
+			</div>
+
+		</footer>
+	</div>
+
+	<script src="./js/script.js"></script>
+	<script src="./js/market.js"></script>
+</body>
+
+</html>

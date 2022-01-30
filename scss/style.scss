@@ -8,6 +8,10 @@ body {
 	overflow: auto;
 }
 
+body.stop {
+	overflow: hidden;
+}
+
 .root {
 	background-image: linear-gradient(60deg, #dff1ff 0%, #e9f3ff 70%, #f7faff 100%);
 	position: relative;
