@@ -28,6 +28,8 @@ const initialCards = [
 	}
 ];
 
+
+
 const selectorsValidation = {
 	formSelector: '.popup__form',
 	inputSelector: '.popup__input',
@@ -99,15 +101,38 @@ const openAddPopup = () => {
 	openPopup(popupProfileAdd);
 };
 
+const updateProfile = () => {
+	profileName.textContent = localStorage.getItem('name');
+	profileSubtitle.textContent = localStorage.getItem('email');
+};
+updateProfile();
 
 // Отправка edit popup
 const handlerFormEditSubmit = (evt) => {
 	evt.preventDefault();
+
 	profileName.textContent = popupInputValueName.value;
 	profileSubtitle.textContent = popupInputValueHobby.value;
+
+	localStorage.setItem('name', popupInputValueName.value);
+	localStorage.setItem('email', popupInputValueHobby.value);
+
 	closePopup(popupProfileEdit);
+	updateProfile();
 };
+
+window.addEventListener('storage', () => {
+	updateProfile();
+});
 // Отправка add popup
+const updateInitialCards = () => {
+	localStorage.setItem('crypto', JSON.stringify(initialCards));
+};
+
+if (!localStorage.getItem('crypto')) {
+	updateInitialCards();
+}
+
 const handlerFormAddSubmit = (evt) => {
 	evt.preventDefault();
 	const cardData = {
@@ -115,16 +140,17 @@ const handlerFormAddSubmit = (evt) => {
 		link: popupInputValueCardLink.value,
 	};
 
-	initialCards.push(cardData);
+	const obj = JSON.parse(localStorage.getItem('crypto'));
 
-	console.log(initialCards);
+	obj.push(cardData);
+
+	localStorage.setItem('crypto', JSON.stringify(obj));
 
 	createCard(cardData);
 	closePopup(popupProfileAdd);
 
 	popupAddForm.reset();
 };
-
 
 const renderCard = (container, data) => {
 	container.prepend(data);
@@ -135,6 +161,13 @@ const createCard = (data) => {
 	const cardElement = card.generateCard();
 	renderCard(placesBlock, cardElement);
 };
+
+const updateCruptoObj = () => {
+	const obj = JSON.parse(localStorage.getItem('crypto'));
+	obj.forEach(item => createCard(item));
+};
+updateCruptoObj();
+
 
 // Закрывает все модальные окна
 popupCloseBtns.forEach(item => {
@@ -160,7 +193,7 @@ popups.forEach(item => {
 });
 
 // Отправка исходных данных для составления карточек
-initialCards.forEach(item => createCard(item));
+
 
 // Открытие модальных окон
 

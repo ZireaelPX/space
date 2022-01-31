@@ -47,7 +47,6 @@ class FormValidator {
 
 	// Функция для сброса ошибок
 	resetErrors() {
-		console.log(this._inputList);
 		this._inputList.forEach((input) => {
 			this._errorElement = this._form.querySelector(`#${input.id}-error`);
 			input.classList.remove(this._inputErrorClass);
