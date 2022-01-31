@@ -130,6 +130,12 @@
 .market__price {
   color: #0ecb81;
 }
+.market__price._red {
+  color: #f83535;
+}
+.market__price._green {
+  color: #0ecb81;
+}
 .market__forms {
   -ms-grid-column: 2;
       grid-column-start: 2;

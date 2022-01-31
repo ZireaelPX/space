@@ -94,7 +94,12 @@
 		color: rgb(112, 122, 138);
 	}
 	&__price {
-		color: rgb(14, 203, 129);
+		&._red {
+			color: rgb(248, 53, 53);
+		}
+		&._green {
+			color: rgb(14, 203, 129);
+		}
 	}
 	&__forms {
 		grid-column-start: 2;
