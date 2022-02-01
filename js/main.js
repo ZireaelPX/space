@@ -64,11 +64,9 @@ const repeatXRPPrice = () => {
 repeatXRPPrice();
 
 
-
 setInterval(() => {
 	repeatBtcPrice();
 	repeatETHPrice();
 	repeatSOLPrice();
 	repeatXRPPrice();
-	repeatDOTPrice();
 }, 1000);

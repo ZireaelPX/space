@@ -1,5 +1,6 @@
 import Api from './Api.js';
 const textBtcPrice = document.querySelectorAll('.market__btc-price span');
+const textEthPrice = document.querySelectorAll('.market__eth-price span');
 const linkBtcPrice = document.querySelector('.price-btc');
 const linkEthPrice = document.querySelector('.price-eth');
 const linkSolPrice = document.querySelector('.price-sol');
@@ -44,7 +45,11 @@ const repeatETHPrice = () => {
 
 		toggleColorPrice(linkEthPrice, +price);
 
-
+		if (textEthPrice) {
+			textEthPrice.forEach((item) => {
+				item.textContent = +price;
+			});
+		}
 
 		// textBtcPrice.forEach((item) => {
 		// 	item.textContent = +price;
@@ -101,4 +106,4 @@ setInterval(() => {
 	repeatSOLPrice();
 	repeatXRPPrice();
 	repeatDOTPrice();
-}, 100000);
+}, 1000);
