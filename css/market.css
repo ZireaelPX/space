@@ -127,9 +127,6 @@
           justify-content: space-between;
   color: #707a8a;
 }
-.market__price {
-  color: #0ecb81;
-}
 .market__price._red {
   color: #f83535;
 }
@@ -201,6 +198,7 @@
   outline: 1px solid #f0b90b;
 }
 .market__sbm-btn {
+  cursor: pointer;
   margin-top: 20px;
   background-color: #fdd245;
   border: none;
