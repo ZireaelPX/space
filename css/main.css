@@ -302,6 +302,11 @@
   background-size: 800px;
   background-position: 5% 50%;
 }
+@media (max-width: 1224px) {
+  .about_platform {
+    background-size: 400px;
+  }
+}
 @media (max-width: 1024px) {
   .about_platform {
     background-image: none;
@@ -312,6 +317,11 @@
   background-repeat: no-repeat;
   background-size: 800px;
   background-position: 95% 60%;
+}
+@media (max-width: 1224px) {
+  .about_trade {
+    background-size: 400px;
+  }
 }
 @media (max-width: 1024px) {
   .about_trade {

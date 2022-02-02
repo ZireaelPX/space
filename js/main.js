@@ -27,7 +27,6 @@ const repeatBtcPrice = () => {
 		btc.textContent = +price;
 	});
 };
-repeatBtcPrice();
 
 
 const repeatETHPrice = () => {
@@ -39,7 +38,6 @@ const repeatETHPrice = () => {
 		eth.textContent = +price;
 	});
 };
-repeatETHPrice();
 
 const repeatSOLPrice = () => {
 	api.getSOLprice().then((data) => {
@@ -50,7 +48,6 @@ const repeatSOLPrice = () => {
 		sol.textContent = +price;
 	});
 };
-repeatSOLPrice();
 
 const repeatXRPPrice = () => {
 	api.getXRPprice().then((data) => {
@@ -61,12 +58,15 @@ const repeatXRPPrice = () => {
 		xrp.textContent = +price;
 	});
 };
-repeatXRPPrice();
 
+repeatBtcPrice();
+repeatETHPrice();
+repeatSOLPrice();
+repeatXRPPrice();
 
 setInterval(() => {
 	repeatBtcPrice();
 	repeatETHPrice();
 	repeatSOLPrice();
 	repeatXRPPrice();
-}, 1000);
+}, 2000);
