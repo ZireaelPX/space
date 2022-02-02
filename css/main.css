@@ -336,6 +336,11 @@
   max-width: 600px;
   margin: 0px 100px 0px auto;
 }
+@media (max-width: 1224px) {
+  .about__block {
+    margin: 0px 0px 0px auto;
+  }
+}
 @media (max-width: 1024px) {
   .about__block {
     margin: 0 auto;
