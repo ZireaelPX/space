@@ -1,72 +1,73 @@
 import Api from './Api.js';
 
-const api = new Api();
 
-const btc = document.querySelector('.card_price_btc');
-const eth = document.querySelector('.card_price_eth');
-const sol = document.querySelector('.card_price_sol');
-const xrp = document.querySelector('.card_price_xrp');
-
-const toggleColorPrice = (span, price) => {
-	if (+span.textContent < price) {
-		span.classList.add('_green');
-		span.classList.remove('_red');
-	} else {
-		span.classList.add('_red');
-		span.classList.remove('_green');
-	}
-};
-
-const repeatBtcPrice = () => {
-	api.getBTCprice().then((data) => {
-
-		const price = data.price;
-
-		toggleColorPrice(btc, +price);
-
-		btc.textContent = +price;
-	});
-};
+window.addEventListener('DOMContentLoaded', () => {
 
 
-const repeatETHPrice = () => {
-	api.getETHprice().then((data) => {
-		const price = data.price;
+	const api = new Api();
 
-		toggleColorPrice(eth, +price);
+	const btc = document.querySelector('.card_price_btc');
+	const eth = document.querySelector('.card_price_eth');
+	const sol = document.querySelector('.card_price_sol');
+	const xrp = document.querySelector('.card_price_xrp');
 
-		eth.textContent = +price;
-	});
-};
+	const toggleColorPrice = (span, price) => {
+		if (+span.textContent < price) {
+			span.classList.add('_green');
+			span.classList.remove('_red');
+		} else {
+			span.classList.add('_red');
+			span.classList.remove('_green');
+		}
+	};
 
-const repeatSOLPrice = () => {
-	api.getSOLprice().then((data) => {
-		const price = data.price;
+	const repeatBtcPrice = () => {
+		api.getBTCprice().then((data) => {
 
-		toggleColorPrice(sol, +price);
+			const price = data.price;
 
-		sol.textContent = +price;
-	});
-};
+			toggleColorPrice(btc, +price);
 
-const repeatXRPPrice = () => {
-	api.getXRPprice().then((data) => {
-		const price = data.price;
+			btc.textContent = +price;
+		});
+	};
 
-		toggleColorPrice(xrp, +price);
 
-		xrp.textContent = +price;
-	});
-};
+	const repeatETHPrice = () => {
+		api.getETHprice().then((data) => {
+			const price = data.price;
 
-repeatBtcPrice();
-repeatETHPrice();
-repeatSOLPrice();
-repeatXRPPrice();
+			toggleColorPrice(eth, +price);
 
-setInterval(() => {
+			eth.textContent = +price;
+		});
+	};
+
+	const repeatSOLPrice = () => {
+		api.getSOLprice().then((data) => {
+			const price = data.price;
+
+			toggleColorPrice(sol, +price);
+
+			sol.textContent = +price;
+		});
+	};
+
+	const repeatXRPPrice = () => {
+		api.getXRPprice().then((data) => {
+			const price = data.price;
+
+			toggleColorPrice(xrp, +price);
+
+			xrp.textContent = +price;
+		});
+	};
+
 	repeatBtcPrice();
 	repeatETHPrice();
 	repeatSOLPrice();
 	repeatXRPPrice();
-}, 2000);
+
+
+});
+
