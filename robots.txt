@@ -1,0 +1,7 @@
+User-Agent: *
+
+Disallow: /personal.html
+Disallow: /market.html
+Disallow: /market-eth.html
+
+Host: https://zireaelpx.github.io/space/
