@@ -1,6 +1,9 @@
 import Api from './Api.js';
 const textBtcPrice = document.querySelectorAll('.market__btc-price span');
 const textEthPrice = document.querySelectorAll('.market__eth-price span');
+const textSolPrice = document.querySelectorAll('.market__sol-price span');
+const textXrpPrice = document.querySelectorAll('.market__xrp-price span');
+const textDotPrice = document.querySelectorAll('.market__dot-price span');
 const linkBtcPrice = document.querySelector('.price-btc');
 const linkEthPrice = document.querySelector('.price-eth');
 const linkSolPrice = document.querySelector('.price-sol');
@@ -67,6 +70,12 @@ const repeatSOLPrice = () => {
 		// textBtcPrice.forEach((item) => {
 		// 	item.textContent = +price;
 		// });
+		if (textSolPrice) {
+			textSolPrice.forEach((item) => {
+				item.textContent = +price;
+			});
+		}
+
 		linkSolPrice.textContent = +price;
 	});
 };
@@ -81,6 +90,11 @@ const repeatXRPPrice = () => {
 		// textBtcPrice.forEach((item) => {
 		// 	item.textContent = +price;
 		// });
+		if (textXrpPrice) {
+			textXrpPrice.forEach((item) => {
+				item.textContent = +price;
+			});
+		}
 		linkXrpPrice.textContent = +price;
 	});
 };
@@ -91,7 +105,11 @@ const repeatDOTPrice = () => {
 		const price = data.price;
 
 		toggleColorPrice(linkDotPrice, +price);
-
+		if (textDotPrice) {
+			textDotPrice.forEach((item) => {
+				item.textContent = +price;
+			});
+		}
 		// textBtcPrice.forEach((item) => {
 		// 	item.textContent = +price;
 		// });

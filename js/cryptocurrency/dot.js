@@ -6,11 +6,11 @@ const marketStorage = document.querySelectorAll('.market__storage span');
 
 const updateStorage = () => {
 	marketStorage.forEach(item => {
-		item.textContent = localStorage.getItem('SOL') || '0';
+		item.textContent = localStorage.getItem('DOT') || '0';
 	});
 };
 
-const tradeBtc = new Trade(marketFormBuy, marketFormSell, 'SOL', updateStorage);
+const tradeBtc = new Trade(marketFormBuy, marketFormSell, 'DOT', updateStorage);
 tradeBtc.setEventListeners();
 
 

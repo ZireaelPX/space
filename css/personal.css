@@ -162,23 +162,41 @@
     height: 18px;
   }
 }
+.profile__avatar-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  height: 120px;
+  margin: 0 30px 0 0;
+  outline: none;
+  padding: 0;
+  -webkit-transition: background-color 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s;
+  width: 120px;
+  cursor: pointer;
+}
+
+.profile__avatar-btn:hover {
+  background: rgba(207, 207, 207, 0.8) url("../image/personal/pen.svg") center/26px no-repeat;
+}
+
+@media screen and (max-width: 620px) {
+  .profile__avatar-btn {
+    margin: 0px 0px 26px 0px;
+  }
+}
 .profile__avatar {
-  min-width: 120px;
-  min-height: 120px;
+  position: relative;
+  z-index: -1;
   width: 120px;
   height: 120px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0px 30px 0px 0px;
+  /* margin: 0px 30px 0px 0px; */
 }
 
-@media screen and (max-width: 620px) {
-  .profile__avatar {
-    margin: 0px 0px 26px 0px;
-  }
-}
 .profile__add-btn {
   margin-left: 30px;
   position: relative;
@@ -471,7 +489,6 @@
 
 .popup__container {
   width: 430px;
-  height: 330px;
   position: relative;
   border-radius: 15px;
   background-color: #fff;

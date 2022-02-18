@@ -5,7 +5,15 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Криптобиржа - Space. Создайте свою криптовалюту</title>
+	<meta name="googlebot-news" content="noindex" />
+	<meta name="robots" content="nosnippet" />
+	<meta name="robots" content="max-image-preview:standard" />
+	<meta name="description"
+		content="Space - криптовалютная биржа. Храните всю валюты на нашей бирже. Научитесь торговать с помощью систем обучения. Смотрите полседние новости из мира криптовалют.">
+	<meta name="keywords"
+		content="Новости криптовалют, Купить криптовалюту, Пополнение криптокошелька, Фиатная валюта, Криптовалюта, Биткоин, Ethereum, Торговля , криптовалютой, Конвертация,  криптовалют, создание криптовалют" />
+
+	<title>Криптобиржа - Space. Создайте свою криптовалюту. Личный кабинет</title>
 	<link rel="stylesheet" href="./css/personal.css">
 </head>
 
@@ -13,6 +21,7 @@
 	<div class="root__block">
 		<header class="header">
 			<a href="./main.html">
+
 				<img class="header__logo" src="./image/logo.png" alt="Криптобиржа. Space">
 			</a>
 			<!-- <a href="./market.html">
@@ -22,7 +31,10 @@
 		</header>
 		<main class="main">
 			<section class="profile">
-				<img class="profile__avatar" src="./image/personal/avatar.png" alt="Ваша аватарка">
+				<button class="profile__avatar-btn">
+					<img class="profile__avatar" src="./image/personal/avatar.png" alt="Ваша аватарка">
+					<!-- <img class="profile__avatar" src="#" alt=""> -->
+				</button>
 				<div class="profile__info">
 					<h1 class="profile__name">Пользователь 1</h1>
 					<button type="button" class="profile__edit-btn"></button>
@@ -46,8 +58,8 @@
 				<input type="text" class="popup__input popup__input_value_name" name="name" id="name"
 					placeholder="Имя" required minlength="2" autocomplete="off">
 				<span class="popup__error" id="name-error"></span>
-				<input type="text" class="popup__input popup__input_value_hobby" name="hobby" id="hobby"
-					placeholder="Профессия" required minlength="2" autocomplete="off">
+				<input type="email" class="popup__input popup__input_value_hobby" name="hobby" id="hobby"
+					placeholder="email" required minlength="2" autocomplete="off">
 				<span class="popup__error" id="hobby-error"></span>
 				<button class="popup__submit-btn" type="submit">Сохранить</button>
 			</form>
@@ -65,6 +77,18 @@
 					placeholder="Ссылка на изображение" required>
 				<span class="popup__error" id="link-error"></span>
 				<button class="popup__submit-btn" type="submit">Создать</button>
+			</form>
+			<button class="popup__close-btn" type="button"></button>
+		</div>
+	</div>
+	<div class="popup popup_avatar-edit">
+		<div class="popup__container">
+			<h2 class="popup__title">Обновить аватар</h2>
+			<form name="profile-form" action="#" class="popup__form popup__form_name_avatar-edit">
+				<input type="url" class="popup__input popup__input_value_avatar-link" name="avatar" id="avatar"
+					placeholder="Ссылка на изображение" required>
+				<span class="popup__error" id="avatar-error"></span>
+				<button class="popup__submit-btn" type="submit">Сохранить</button>
 			</form>
 			<button class="popup__close-btn" type="button"></button>
 		</div>
@@ -87,21 +111,25 @@
 			<button class="place__delete-btn" type="button"></button>
 		</li>
 	</template>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function (m, e, t, r, i, k, a) {
+			m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+			m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+		})
+			(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(87504846, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/87504846" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+		ym(87504846, "init", {
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true,
+			webvisor: true
+		});
+	</script>
+	<noscript>
+		<div><img src="https://mc.yandex.ru/watch/87504846" style="position:absolute; left:-9999px;" alt="" /></div>
+	</noscript>
+	<!-- /Yandex.Metrika counter -->
 	<script type="module" src="./js/personal/personal.js"></script>
 
 </body>

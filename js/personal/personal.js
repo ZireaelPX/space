@@ -46,9 +46,13 @@ const placesBlock = document.querySelector('.places__block');
 
 const popupCloseBtns = document.querySelectorAll('.popup__close-btn');
 
+const popupAvatarEdit = document.querySelector('.popup_avatar-edit');
+const popupInputValueAvatarLink = document.querySelector('.popup__input_value_avatar-link');
+
+const profileAvatar = document.querySelector('.profile__avatar');
 const popupProfileEdit = document.querySelector('.popup_profile-edit');
 const profileEditBtn = document.querySelector('.profile__edit-btn');
-
+const profileEditAvatar = document.querySelector('.profile__avatar-btn');
 
 const popupProfileAdd = document.querySelector('.popup_card-add');
 const profileAddBtn = document.querySelector('.profile__add-btn');
@@ -67,6 +71,7 @@ const profileSubtitle = document.querySelector('.profile__subtitle');
 
 const popupEditForm = document.querySelector('.popup__form_name_edit');
 const popupAddForm = document.querySelector('.popup__form_name_add');
+const popupAvatarForm = document.querySelector('.popup__form_name_avatar-edit');
 
 // const forms = document.querySelectorAll('.popup__form');
 // Для классов
@@ -99,6 +104,12 @@ const openEditPopup = () => {
 const openAddPopup = () => {
 	formAddValid.toggleButtonState();
 	openPopup(popupProfileAdd);
+};
+// Открытие Avatar popup
+const openAvatarPopup = () => {
+	// formAddValid.toggleButtonState();
+	formAvatarValid.toggleButtonState();
+	openPopup(popupAvatarEdit);
 };
 
 const updateProfile = () => {
@@ -204,18 +215,55 @@ profileEditBtn.addEventListener('click', () => {
 });
 profileAddBtn.addEventListener('click', () => {
 	popupAddForm.reset();
-	formAddValid.resetErrors();
+	formAvatarValid.resetErrors();
 
 	openAddPopup();
 });
+
+profileEditAvatar.addEventListener('click', () => {
+	popupAvatarForm.reset();
+	formEditValid.resetErrors();
+	openAvatarPopup();
+});
+
+
+
+
+const updateAvatar = () => {
+	const getLink = localStorage.getItem('linkAvatar');
+
+	profileAvatar.src = getLink;
+};
+
+if (localStorage.getItem('linkAvatar')) {
+	updateAvatar();
+}
+
+const handleFormUpdateAvatar = (evt) => {
+	evt.preventDefault();
+
+	const linkAvatar = popupInputValueAvatarLink.value;
+
+	localStorage.setItem('linkAvatar', linkAvatar);
+
+	updateAvatar(localStorage.getItem('linkAvatar'));
+
+	closePopup(popupAvatarEdit);
+
+	popupAvatarForm.reset();
+};
+
 // Отправка данных с форм
 popupEditForm.addEventListener('submit', handlerFormEditSubmit);
 popupAddForm.addEventListener('submit', handlerFormAddSubmit);
+popupAvatarForm.addEventListener('submit', handleFormUpdateAvatar);
 
 const formEditValid = new FormValidator(selectorsValidation, popupEditForm);
 const formAddValid = new FormValidator(selectorsValidation, popupAddForm);
+const formAvatarValid = new FormValidator(selectorsValidation, popupAvatarForm);
 
 formEditValid.enableValidation();
 formAddValid.enableValidation();
+formAvatarValid.enableValidation();
 
 export { openImagePopup };
